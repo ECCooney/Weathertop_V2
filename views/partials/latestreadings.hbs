@@ -1,0 +1,81 @@
+<section>
+    <br>
+    <div class="ui five column grid">
+        <div class="stretched row">
+            <div class="column">
+                <div class="ui inverted teal card">
+                    <div class="content">
+                        <i class="right floated big inverted map marker alternate icon"></i>
+                        <div class="header">{{station.name}}</div>
+                        <div class="ui section divider"></div>
+                        <div class="description">
+                            <p>Lat:</p>
+                            <p>Long:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui teal card">
+                    <div class="content">
+                        <i class="right floated big thermometer half icon"></i>
+                        <div class="header">Weather</div>
+                        <div class="ui section divider"></div>
+                        <div class="description">
+                            <p>{{latestWeather.code}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui teal card">
+                    <div class="content">
+                        <i class="right floated big thermometer half icon"></i>
+                        <i class="right floated big thermometer half icon"></i>
+                        <div class="header">Temp</div>
+                        <div class="ui section divider"></div>
+                        <div class="description">
+                            <p>C {{updateWeather.temperature}}</p>
+                            <p>F</p>
+                            <p>Max</p>
+                            <p>Min </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui teal card">
+                    <div class="content">
+                        <i class="right floated big thermometer half icon"></i>
+                        <i class="right floated big wind icon"></i>
+                        <div class="header">Wind</div>
+                        <div class="ui section divider"></div>
+                        <div class="description">
+                            <p> bft</p>
+                            <p></p>
+                            <p>Feels Like</p>
+                            <p>Max </p>
+                            <p>Min </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui teal card">
+                    <div class="content">
+                        <i class="right floated big compress arrows alternate icon"></i>
+                        <i class="right floated big compress arrows alternate icon"></i>
+                        <div class="header">Pressure</div>
+                        <div class="ui section divider"></div>
+                        <div class="description">
+                            <p> hpa</p>
+                            <p>Max</p>
+                            <p>Min </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</section>
