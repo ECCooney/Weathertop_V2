@@ -1,57 +1,94 @@
 {
   "stationCollection": [
     {
-      "id": "1",
-      "name": "Dunmore",
-      "readings": [
-        {
-          "id": "3",
-          "code": "800",
-          "temperature": "0.5",
-          "windSpeed": "3.5",
-          "windDirection": "220",
-          "pressure": "1001"
-        },
-        {
-          "id": "4",
-          "code": "600",
-          "temperature": "6.0",
-          "windSpeed": "2",
-          "windDirection": "200",
-          "pressure": "1004"
-        }
-      ]
+      "id": "4727b070-1bd9-11ed-970f-973f42c23d25",
+      "userid": {
+        "firstName": "homer",
+        "lastName": "simpson",
+        "email": "homer@simpson.com",
+        "password": "secret",
+        "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
+      },
+      "latitude": "1.2323",
+      "longitude": "1.1232",
+      "readings": []
     },
-
     {
-      "id": "2",
-      "name": "Tramore",
+      "id": "cd6e3b40-1bd9-11ed-970f-973f42c23d25",
+      "userid": {
+        "firstName": "homer",
+        "lastName": "simpson",
+        "email": "homer@simpson.com",
+        "password": "secret",
+        "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
+      },
+      "latitude": "11.11",
+      "longitude": "-10.111",
+      "readings": []
+    },
+    {
+      "id": "f3bdbf80-1bdb-11ed-ac63-9199d05b5b5c",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Howth",
+      "latitude": "1.2323",
+      "longitude": "1.1232",
       "readings": [
         {
-          "id": "5",
+          "id": "3cc7de40-1bdc-11ed-ac63-9199d05b5b5c",
+          "code": "400",
+          "temperature": "12.6",
+          "windSpeed": "8",
+          "windDirection": "250",
+          "pressure": "600"
+        },
+        {
+          "id": "fccb1250-1bde-11ed-833b-89700c997551",
           "code": "800",
-          "temperature": "0.5",
-          "windSpeed": "3.5",
-          "windDirection": "220",
-          "pressure": "1001"
+          "temperature": "12.8",
+          "windSpeed": "6.3",
+          "windDirection": "250",
+          "pressure": "200"
         },
         {
-          "id": "6",
-          "code": "600",
-          "temperature": "6.0",
-          "windSpeed": "2",
-          "windDirection": "200",
-          "pressure": "1004"
-        },
-        {
-          "id": "7",
-          "code": "300",
-          "temperature": "2.0",
-          "windSpeed": "1",
-          "windDirection": "700",
-          "pressure": "1002"
+          "id": "ef93e060-1be5-11ed-933d-65d04d5cd202",
+          "code": "800",
+          "temperature": "12.8",
+          "windSpeed": "6",
+          "windDirection": "300.0",
+          "pressure": "300"
         }
-      ]
+      ],
+      "code": "400",
+      "tempC": "12.6",
+      "windSpd": "8",
+      "pressure": "600",
+      "latestWeather": {
+        "tempFarenheit": "55.04",
+        "beaufort": 2,
+        "pressure": "300",
+        "temperature": "12.8",
+        "code": "800",
+        "compassDirection": "WNW",
+        "windChill": "12.69",
+        "minWindSpeed": "6",
+        "maxWindSpeed": "8",
+        "minTemp": "12.6",
+        "maxTemp": "12.8",
+        "minPressure": "200",
+        "maxPressure": "600",
+        "tempTrend": "",
+        "windTrend": "arrow down",
+        "pressureTrend": ""
+      }
+    },
+    {
+      "id": "e256d450-1be7-11ed-906e-ef737a215dab",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Dumore",
+      "latitude": "1.2323",
+      "longitude": "1.1232",
+      "newRead": {},
+      "readings": []
     }
   ]
 }

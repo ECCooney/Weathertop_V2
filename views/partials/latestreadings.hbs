@@ -6,11 +6,11 @@
                 <div class="ui inverted teal card">
                     <div class="content">
                         <i class="right floated big inverted map marker alternate icon"></i>
-                        <div class="header">{{station.name}}</div>
+                        <div class="header">{{name}}</div>
                         <div class="ui section divider"></div>
                         <div class="description">
-                            <p>Lat:</p>
-                            <p>Long:</p>
+                            <p>Lat:{{latitude}}</p>
+                            <p>Long:{{longitude}}</p>
                         </div>
                     </div>
                 </div>
@@ -35,8 +35,8 @@
                         <div class="header">Temp</div>
                         <div class="ui section divider"></div>
                         <div class="description">
-                            <p>C {{updateWeather.temperature}}</p>
-                            <p>F</p>
+                            <p>C {{latestWeather.temperature}}</p>
+                            <p>F {{newRead.tempF}}</p>
                             <p>Max</p>
                             <p>Min </p>
                         </div>
@@ -68,7 +68,7 @@
                         <div class="header">Pressure</div>
                         <div class="ui section divider"></div>
                         <div class="description">
-                            <p> hpa</p>
+                            <p>{{newRead.pressure}} hpa</p>
                             <p>Max</p>
                             <p>Min </p>
                         </div>

@@ -1,44 +1,94 @@
 "use strict";
 
 const _ = require("lodash");
+const JsonStore = require("./json-store");
+const convert = require("../utils/conversions");
+const analytics = require("../utils/analytics")
 
 const stationStore = {
-  stationCollection: require("./stations-store.json").stationCollection,
+  store: new JsonStore("./models/stations-store.json", {
+    stationCollection: []
+  }),
+  collection: "stationCollection",
 
   getAllStations() {
-    return this.stationCollection;
+    return this.store.findAll(this.collection);
   },
 
-  getStation(id) {
-    return _.find(this.stationCollection, { id: id });
+  getStation(id) { 
+    return this.store.findOneBy(this.collection, { id: id });
+  },
+
+  getUserStations(userid) {
+    return this.store.findBy(this.collection, { userid: userid });
+  },
+
+  addStation(station) {
+    this.store.add(this.collection, station);
+    this.store.save();
   },
 
   removeStation(id) {
-    _.remove(this.stationCollection, { id: id });
+    const station = this.getStation(id);
+    this.store.remove(this.collection, station);
+    this.store.save();
   },
 
-  removeReading(id, readingId) {
-    const station = this.getStation(id);
-    _.remove(station.readings, { id: readingId });
+  removeAllStations() {
+    this.store.removeAll(this.collection);
+    this.store.save();
   },
 
   addReading(id, reading) {
     const station = this.getStation(id);
     station.readings.push(reading);
+    this.store.save();
   },
 
-  addStation(station) {
-    this.stationCollection.push(station);
-  },
-
-  updateWeather(id) {
+  removeReading(id, readingId) {
     const station = this.getStation(id);
-    let latestWeather = null;
-    if (station.readings.length > 0) {
-      latestWeather = station.readings[station.readings.length - 1];
-    }
-    return latestWeather;
+    const readings = station.readings;
+    _.remove(readings, { id: readingId });
+    this.store.save();
   },
+
+  getReading(id, readingId) {
+    const station = this.store.findOneBy(this.collection, { id: id });
+    const readings = station.readings.filter(reading => reading.id == readingId);
+    return readings[0];
+  },
+  
+  updateReading(station) {
+    if (station.readings.length<1) {
+      station.newRead = {};
+    } else {
+      const lastReading = station.readings[station.readings.length - 1];
+      // station.newRead.time = lastReading.time;
+      station.newRead.code = lastReading.code;
+      // station.report.conditions = conversion.weatherDescription(lastReading.code);
+      // station.report.icon = conversion.weatherIcon(lastReading.code);
+      station.newRead.tempC = lastReading.temperature;
+      // station.report.tempF = conversion.celsiusToFahrenheit(lastReading.temperature);
+      station.newRead.windSpeed = lastReading.windSpeed;
+      // station.report.beaufort = conversion.kmToBeaufort(lastReading.windSpeed);
+      // station.report.windChill = conversion.calculateWindChill(lastReading.temperature, lastReading.windSpeed);
+      station.newRead.windDirection = lastReading.windDirection;
+      // station.report.windCompass = conversion.degreeToCompass(lastReading.windDirection);
+      // station.newRead.pressure = lastReading.pressure;
+      // station.report.minTemp = analytics.minMax(station.readings).minTemp;
+      // station.report.maxTemp = analytics.minMax(station.readings).maxTemp;
+      // station.report.tempTrend = analytics.trend(station.readings).tempTrend;
+      // station.report.minWind = analytics.minMax(station.readings).minWind;
+      // station.report.maxWind = analytics.minMax(station.readings).maxWind;
+      // station.report.windTrend = analytics.trend(station.readings).windTrend;
+      // station.report.minPressure = analytics.minMax(station.readings).minPressure;
+      // station.report.maxPressure = analytics.minMax(station.readings).maxPressure;
+      // station.report.pressureTrend = analytics.trend(station.readings).pressureTrend;
+    }
+    this.store.save();
+  }
+     
+
 };
 
 module.exports = stationStore;
