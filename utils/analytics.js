@@ -9,18 +9,11 @@ const analytics = {
   latestWeather(station) {
     if (station.readings.length > 0) {
       const lastReading = station.readings[station.readings.length - 1];
-      const tempFarenheit = conversion.tempF(lastReading.temperature);
+      const tempF = conversion.tempF(lastReading.temperature);
       const beaufort = conversion.beaufort(lastReading.windSpeed);
       const pressure = lastReading.pressure;
       const temperature = lastReading.temperature;
       const code = lastReading.code;
-      const windCompass = conversion.windDirect(
-        lastReading.windDirection
-      );
-      const windChill = analytics.windChill(
-        lastReading.temperature,
-        lastReading.windSpeed
-      );
       const conditions = conversion.weatherConditions(lastReading.code);
       const minWind = analytics.minWind(station.readings);
       const maxWind = analytics.maxWind(station.readings);
@@ -32,8 +25,15 @@ const analytics = {
       const tempTrend = trends.tempTrends(station.readings);
       const windTrend = trends.windTrends(station.readings);
       const pressureTrend = trends.pressureTrends(station.readings);
+      const windCompass = conversion.windDirect(
+        lastReading.windDirection
+      );
+      const windChill = analytics.windChill(
+        lastReading.temperature,
+        lastReading.windSpeed
+      );
       var latestWeather = {
-        tempFarenheit, beaufort, pressure, temperature, code, windCompass,
+        tempF, beaufort, pressure, temperature, code, windCompass,
         windChill, conditions, minWind, maxWind, minTemp, maxTemp, minPressure, maxPressure,
         weatherIcon, tempTrend, windTrend, pressureTrend
       };
