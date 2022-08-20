@@ -1,12 +1,35 @@
 {{> welcomemenu id='login' }}
 
-<form class="ui stacked segment form" action="/authenticate" method="POST">
-  <h3 class="ui header">Log-in</h3>
-  <div class="field">
-    <label>Email</label> <input placeholder="Email" name="email">
-  </div>
-  <div class="field">
-    <label>Password</label> <input type="password"  name="password">
-  </div>
-  <button class="ui blue submit button">Login</button>
-</form>
+<style>
+    body {
+        background-color: #DADADA;
+    }
+    .image {
+        margin-top: -100px;
+    }
+    .column {
+        margin-top: 50px;
+        max-width: 600px;
+    }
+</style>
+<div class="ui middle aligned center aligned grid">
+    <div class="column">
+        <h1 class="ui teal image header">
+        <img src="https://cdn.glitch.global/a5b20e7a-0b38-4215-95fe-1ece87de474e/logo.png?v=1660997976634" class="image">
+            <div class="content">Log-in to Your Account</div>
+        </h1>
+        <form class="ui large segment form" action="/authenticate" method="POST">
+            <div class="field">
+                <label>Email</label> <input placeholder="Email" name="email">
+            </div>
+            <div class="field">
+                <label>Password</label> <input type="password" name="password">
+            </div>
+            <button class="ui fluid teal submit button">Login</button>
+        </form>
+        <div class ="ui message">
+            No Account Yet?
+            <a href="/signup">Sign Up</a>
+        </div>
+    </div>
+</div>

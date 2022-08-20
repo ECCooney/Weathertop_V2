@@ -1,5 +1,63 @@
-{{> welcomemenu }}
+<style>
+.masthead{
+    height: 40em;
+    margin-top: 0px;
+}
 
-<section class="ui center aligned middle aligned segment">
-  <p> Sign up or Log in... </p>
-</section>
+
+
+.masthead h1.ui.header{
+    margin-top:1em;
+    margin-bottom: 0em;
+    font-size: 6em;
+    font-weight: bold;
+}
+
+.ui.vertical.segment:not(.masthead) {
+    padding-top: 6em;
+    padding-bottom: 6em;
+}
+</style>
+
+<div class="masthead-background">
+    {{> welcomemenu id='login' }}
+    <div class="ui vertical masthead center aligned segment">
+        <a class="ui inverted text container">
+            <h1 class="ui inverted header">
+                Weathertop
+            </h1>
+            <h2 class="ui inverted header">Your Weather App</h2>
+            <br>
+            <a href="/about" class="ui huge button">Our Story<i class="right arrow icon"></i></a>
+    </div>
+</div>
+
+<div class="ui container">
+    <div class="ui vertical stripe segment">
+        <div class="ui middle aligned stackable grid container">
+            <div class="row">
+                <div class="eight wide column">
+                    <h2 class="ui header">Weathertop Online</h2>
+                    <p>Weathertop Online extends the usage of the popular Weathertop reading device to a personalised
+                        cloud based dashboard. Now you can have access to all historical readings, your own
+                        personalised list of stations, trends and a handy visual representation of the date from your
+                        machine
+                    </p>
+                    <h2 class="ui header">Getting Started</h2>
+                    <p>Once you've registered, calibrated and started using your Weathertop device, create an account
+                        here. All you need is an email and password.
+                        Once logged in, you can create the list of weather stations that suit you, and within those
+                        stations
+                        you can input the data from each device reading. The easy to use dashboard will track
+                        your reading history</p>
+                </div>
+                <div class="six wide right floated teal column">
+                    <div class="ui fluid image">
+                        <div class="ui teal ribbon label">Sample</div>
+                        <img src="https://cdn.glitch.global/a5b20e7a-0b38-4215-95fe-1ece87de474e/StationSample.PNG?v=1660997980417">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

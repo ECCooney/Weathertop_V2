@@ -57,37 +57,7 @@ const stationStore = {
     const readings = station.readings.filter(reading => reading.id == readingId);
     return readings[0];
   },
-  
-  updateReading(station) {
-    if (station.readings.length<1) {
-      station.newRead = {};
-    } else {
-      const lastReading = station.readings[station.readings.length - 1];
-      // station.newRead.time = lastReading.time;
-      station.newRead.code = lastReading.code;
-      // station.report.conditions = conversion.weatherDescription(lastReading.code);
-      // station.report.icon = conversion.weatherIcon(lastReading.code);
-      station.newRead.tempC = lastReading.temperature;
-      // station.report.tempF = conversion.celsiusToFahrenheit(lastReading.temperature);
-      station.newRead.windSpeed = lastReading.windSpeed;
-      // station.report.beaufort = conversion.kmToBeaufort(lastReading.windSpeed);
-      // station.report.windChill = conversion.calculateWindChill(lastReading.temperature, lastReading.windSpeed);
-      station.newRead.windDirection = lastReading.windDirection;
-      // station.report.windCompass = conversion.degreeToCompass(lastReading.windDirection);
-      // station.newRead.pressure = lastReading.pressure;
-      // station.report.minTemp = analytics.minMax(station.readings).minTemp;
-      // station.report.maxTemp = analytics.minMax(station.readings).maxTemp;
-      // station.report.tempTrend = analytics.trend(station.readings).tempTrend;
-      // station.report.minWind = analytics.minMax(station.readings).minWind;
-      // station.report.maxWind = analytics.minMax(station.readings).maxWind;
-      // station.report.windTrend = analytics.trend(station.readings).windTrend;
-      // station.report.minPressure = analytics.minMax(station.readings).minPressure;
-      // station.report.maxPressure = analytics.minMax(station.readings).maxPressure;
-      // station.report.pressureTrend = analytics.trend(station.readings).pressureTrend;
-    }
-    this.store.save();
-  }
-     
+ 
 
 };
 

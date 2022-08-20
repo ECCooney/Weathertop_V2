@@ -19,6 +19,15 @@ const accounts = {
     response.render("login", viewData);
   },
 
+  accountDetails(request, response) {
+    const user = userstore.getUserByEmail(request.cookies.station);
+    const viewData = {
+      title: "Member Details",
+      user: user,
+    };
+    response.render("accountDetails", viewData);
+  },
+
   logout(request, response) {
     response.cookie("station", "");
     response.redirect("/");
@@ -53,6 +62,19 @@ const accounts = {
   getCurrentUser(request) {
     const userEmail = request.cookies.station;
     return userstore.getUserByEmail(userEmail);
+  },
+
+  editMember(request, response) {
+    const userId = request.params.id;
+    const user = userstore.getUserById(userId);
+    const newUser = {
+      firstName: request.body.firstName,
+      email: request.body.email,
+      lastName: request.body.lastName,
+      password: request.body.password,
+    };
+    userstore.updateUser(user, newUser);
+    response.redirect("/login");
   },
 };
 

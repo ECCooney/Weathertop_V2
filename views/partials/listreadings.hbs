@@ -1,6 +1,7 @@
 <table class="ui table">
   <thead>
     <tr>
+        <th>Timestamp</th>
         <th>Code</th>
         <th>Temperature</th>
         <th>WindSpeed</th>
@@ -12,6 +13,9 @@
   <tbody>
         {{#each station.readings}}
         <tr>
+          <td>
+           {{date}}
+        </td>
             <td>
               {{code}}
             </td>

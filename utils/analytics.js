@@ -33,7 +33,7 @@ const analytics = {
         lastReading.windSpeed
       );
       var latestWeather = {
-        tempF, beaufort, pressure, temperature, code, windCompass,
+        code, temperature, pressure, tempF, beaufort, windCompass,
         windChill, conditions, minWind, maxWind, minTemp, maxTemp, minPressure, maxPressure,
         weatherIcon, tempTrend, windTrend, pressureTrend
       };

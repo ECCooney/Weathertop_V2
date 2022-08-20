@@ -11,12 +11,13 @@ const station = {
     const stationId = request.params.id;
 
     const station = stationStore.getStation(stationId);
-    
+
     const latestWeather = analytics.latestWeather(station);
-    
+
     const viewData = {
       title: "Station",
       station: station,
+      latestWeather: latestWeather,
     };
     response.render("station", viewData);
   },
@@ -32,6 +33,9 @@ const station = {
   addReading(request, response) {
     const stationId = request.params.id;
     const station = stationStore.getStation(stationId);
+    let timestamp = new Date().getTime(); //generates unix timestamp
+    let date = new Date(timestamp);
+
     const newReading = {
       id: uuid.v1(),
       code: request.body.code,
@@ -39,6 +43,7 @@ const station = {
       windSpeed: request.body.windSpeed,
       windDirection: request.body.windDirection,
       pressure: request.body.pressure,
+      date: date.toGMTString(), //reads GMT (1 HOUR BEHIND!) LocaleDateString does the same as does all other functions
     };
     stationStore.addReading(stationId, newReading);
     response.redirect("/station/" + stationId);

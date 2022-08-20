@@ -1,24 +1,44 @@
 {{> welcomemenu id="signup"}}
 
-<form class="ui stacked segment form" action="/register" method="POST">
-  <h3 class="ui header">Register</h3>
-  <div class="two fields">
-    <div class="field">
-      <label>First Name</label>
-      <input placeholder="First Name" type="text"  name="firstName">
+<style>
+    body {
+        background-color: #DADADA;
+    }
+    .image {
+        margin-top: -100px;
+    }
+    .column {
+        margin-top: 50px;
+        max-width: 600px;
+    }
+</style>
+
+<div class="ui middle aligned center aligned grid">
+    <div class="column">
+        <h1 class="ui teal image header">
+            <img src="public/images/logo.png" class="image">
+            <div class="content">Create a New Account</div>
+        </h1>
+        <form class="ui large segment form" action="/register" method="POST">
+            <div class="two fields">
+                <div class="field">
+                    <label>First Name</label>
+                    <input placeholder="First Name" type="text" name="firstname">
+                </div>
+                <div class="field">
+                    <label>Last Name</label>
+                    <input placeholder="Last Name" type="text" name="lastname">
+                </div>
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input placeholder="Email" type="text" name="email">
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" name="password">
+            </div>
+            <button class="ui teal submit button">Submit</button>
+        </form>
     </div>
-    <div class="field">
-      <label>Last Name</label>
-      <input placeholder="Last Name" type="text"  name="lastName">
-    </div>
-  </div>
-  <div class="field">
-    <label>Email</label>
-    <input placeholder="Email" type="text" name="email">
-  </div>
-  <div class="field">
-    <label>Password</label>
-    <input type="password" name="password">
-  </div>
-  <button class="ui blue submit button">Submit</button>
-</form>
+</div>
