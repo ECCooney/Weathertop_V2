@@ -4,8 +4,9 @@ const logger = require("../utils/logger");
 const stationStore = require("../models/stations-store.js");
 
 const conversion = {
-  tempF(tempC) {
-    let tempF = tempC * 1.8 + 32;
+  
+  tempF(temperature) {
+    let tempF = temperature * 1.8 + 32;
     return tempF.toFixed(2);
   },
 
@@ -81,40 +82,42 @@ const conversion = {
   },
 
   weatherConditions(code) {
-    let conditions = null;
+    code = Number(code);  //code needs to be cast to a number because of data mismatch
+    let condition = null;
     switch (code) {
       case 100:
-        conditions = "Clear";
+        condition = "Clear";
         break;
       case 200:
-        conditions = "Partial Clouds";
+        condition = "Partial Clouds";
         break;
       case 300:
-        conditions = "Cloudy";
+        condition = "Cloudy";
         break;
       case 400:
-        conditions = "Light Showers";
+        condition = "Light Showers";
         break;
       case 500:
-        conditions = "Heavy Showers";
+        condition = "Heavy Showers";
         break;
       case 600:
-        conditions = "Rain";
+        condition = "Rain";
         break;
       case 700:
-        conditions = "Snow";
+        condition = "Snow";
         break;
       case 800:
-        conditions = "Thunder";
+        condition = "Thunder";
         break;
       default:
-        conditions = "No Current Valid Reading";
+        condition = "No Current Valid Reading";
         break;
     }
-    return conditions;
+    return condition;
   },
 
   weatherIcon(code) {
+    code = Number(code);
     let icon = null;
     switch (code) {
       case 100:
@@ -147,6 +150,8 @@ const conversion = {
     }
     return icon;
   },
+  
+    
 };
 
 module.exports = conversion;
