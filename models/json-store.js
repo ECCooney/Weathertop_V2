@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
-const low = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync')
+const low = require("lowdb");
+const FileSync = require("lowdb/adapters/FileSync");
 
 class JsonStore {
   constructor(file, defaults) {
-    const adapter = new FileSync(file)
-    this.db = low(adapter)
+    const adapter = new FileSync(file);
+    this.db = low(adapter);
     this.db.defaults(defaults).value();
   }
 
@@ -36,7 +36,7 @@ class JsonStore {
   }
 
   findByIds(collection, ids) {
-    return this.db.get(collection).keyBy('id').at(ids).value();
+    return this.db.get(collection).keyBy("id").at(ids).value();
   }
 
   findBy(collection, filter) {

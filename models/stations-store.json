@@ -9,53 +9,145 @@
       "newRead": {},
       "readings": [
         {
-          "id": "e9ba0d50-208f-11ed-8658-8322dee3bfbf",
-          "code": "600",
-          "temperature": "24",
-          "windSpeed": "100",
-          "windDirection": "250",
-          "pressure": "1000",
-          "date": "Sat, 20 Aug 2022 13:56:39 GMT"
+          "id": "84ab4510-2494-11ed-b05c-3f389e73c945",
+          "date": "8/25/2022, 4:39:41 PM",
+          "code": 300,
+          "temperature": 24.15,
+          "windSpeed": 4,
+          "windDirection": 144,
+          "pressure": 1013
         }
       ],
       "latestWeather": {
-        "code": "600",
-        "temperature": "24",
-        "pressure": "1000",
-        "tempF": "75.20",
-        "beaufort": 10,
-        "windCompass": "West South West",
-        "windChill": "24.16",
-        "conditions": "Rain",
-        "minWind": "100",
-        "maxWind": "100",
-        "minTemp": "24",
-        "maxTemp": "24",
-        "minPressure": "1000",
-        "maxPressure": "1000",
-        "weatherIcon": "big cloud rain icon",
+        "code": 300,
+        "temperature": 24.15,
+        "pressure": 1013,
+        "tempF": "75.47",
+        "beaufort": 1,
+        "windCompass": "South East",
+        "windChill": "25.89",
+        "conditions": "Cloudy",
+        "minWind": 4,
+        "maxWind": 4,
+        "minTemp": 24.15,
+        "maxTemp": 24.15,
+        "minPressure": 1013,
+        "maxPressure": 1013,
+        "weatherIcon": "big cloud icon",
         "tempTrend": null,
         "windTrend": null,
         "pressureTrend": null
       }
     },
     {
-      "id": "e3e71210-2099-11ed-a600-f7337b3b9ed3",
+      "id": "e5c381f0-2304-11ed-ab64-070e359df89b",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Dumore",
-      "latitude": "70.333",
-      "longitude": "11.11",
+      "name": "Rathmines",
+      "latitude": "53.32",
+      "longitude": "6.25",
       "newRead": {},
-      "readings": []
-    },
-    {
-      "id": "fc5bc070-2099-11ed-a8d3-b748077787ff",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Tramore",
-      "latitude": "11.11",
-      "longitude": "11.11",
-      "newRead": {},
-      "readings": []
+      "readings": [
+        {
+          "id": "840105e0-2495-11ed-b05c-3f389e73c945",
+          "date": "8/25/2022, 4:46:50 PM",
+          "code": 100,
+          "temperature": 30.74,
+          "windSpeed": 4.32,
+          "windDirection": 73,
+          "pressure": 1013
+        },
+        {
+          "id": "4b557750-24bb-11ed-9e48-95e6a0796d8e",
+          "date": "8/25/2022, 9:17:15 PM",
+          "code": 300,
+          "temperature": 21.58,
+          "windSpeed": 1.19,
+          "windDirection": 267,
+          "pressure": 1013
+        },
+        {
+          "id": "256c4740-24bf-11ed-bb74-9337d3afb62d",
+          "date": "8/25/2022, 9:44:50 PM",
+          "code": 300,
+          "temperature": 21.61,
+          "windSpeed": 2.44,
+          "pressure": 1013,
+          "windDirection": 166,
+          "tempTrend": [
+            27.74,
+            19.52,
+            20,
+            17.99,
+            17.67,
+            20.93,
+            20.92,
+            22.01
+          ],
+          "trendLabels": [
+            "25/7/2022",
+            "26/7/2022",
+            "27/7/2022",
+            "28/7/2022",
+            "29/7/2022",
+            "30/7/2022",
+            "31/7/2022",
+            "1/8/2022"
+          ]
+        },
+        {
+          "id": "b288ab70-24c2-11ed-b620-272bf9ca6df9",
+          "date": "8/25/2022, 10:10:15 PM",
+          "code": 300,
+          "temperature": 21.44,
+          "windSpeed": 2.44,
+          "windDirection": 166,
+          "pressure": 1013,
+          "tempTrend": [],
+          "trendLabels": []
+        },
+        {
+          "id": "8e496230-24c3-11ed-805b-73a6f1694410",
+          "date": "8/25/2022, 10:16:24 PM",
+          "code": 300,
+          "temperature": 21.39,
+          "windSpeed": 2.44,
+          "windDirection": 166,
+          "pressure": 1013,
+          "tempTrend": [],
+          "trendLabels": []
+        },
+        {
+          "id": "625dee70-255e-11ed-bd18-9dc356b25c3f",
+          "date": "8/26/2022, 4:44:42 PM",
+          "code": 300,
+          "temperature": 19.12,
+          "windSpeed": 5.78,
+          "windDirection": 340,
+          "pressure": 1016,
+          "tempTrend": [],
+          "trendLabels": []
+        }
+      ],
+      "latestWeather": {
+        "code": 300,
+        "temperature": 21.39,
+        "pressure": 1013,
+        "tempF": "70.50",
+        "beaufort": 1,
+        "windCompass": "South South East",
+        "windChill": "23.08",
+        "conditions": "Cloudy",
+        "minWind": 1.19,
+        "maxWind": 4.32,
+        "minTemp": 21.39,
+        "maxTemp": 30.74,
+        "minPressure": 1013,
+        "maxPressure": 1013,
+        "weatherIcon": "big cloud icon",
+        "tempTrend": "big exchange icon",
+        "windTrend": "big exchange icon",
+        "pressureTrend": "big exchange icon"
+      }
     }
   ]
 }
