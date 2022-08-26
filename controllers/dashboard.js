@@ -1,5 +1,4 @@
 "use strict";
-
 const accounts = require("./accounts.js");
 const logger = require("../utils/logger");
 const stationStore = require("../models/stations-store");
@@ -10,6 +9,7 @@ const uuid = require("uuid");
 const dashboard = {
   index(request, response) {
     logger.info("dashboard rendering");
+
     const loggedInUser = accounts.getCurrentUser(request);
     const stations = stationStore.getUserStations(loggedInUser.id);
     stations.sort((a, b) => a.name.localeCompare(b.name));
@@ -17,6 +17,8 @@ const dashboard = {
       const latestWeather = analytics.latestWeather(station);
       station.latestWeather = latestWeather;
     }
+    
+    // let map = L.map('map').setView([51.505, -0.09], 13);
 
     const viewData = {
       title: "Weathertop Dashboard",

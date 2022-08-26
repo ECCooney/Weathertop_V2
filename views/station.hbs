@@ -1,10 +1,23 @@
 {{> menu}}
 
-<section class="ui center aligned middle aligned segment">
-  <h2 class="ui header">
-    {{station.name}}
-  </h2>
-  {{> latestreadings station}}
-  {{> listreadings}}
-  {{> addreading}}
+<section class="ui container">
+<br>
+  <div class="ui horizontal divider">
+    <h2 class="ui header">
+      {{station.name}}
+    </h2>
+  </div>
+
+{{> latestreadings station}}
+{{> listreadings}}
+{{> charts}}
+
+  <div class="ui section divider"></div>
+  <h3 class="ui header">Auto Generate a Reading</h3>
+    {{> autoreading}}
+  <div class="ui horizontal divider">
+    <h4>or</h4>
+  </div>
+  <h3 class="ui header">Input a Reading</h3>
+{{> addreading}}
 </section>

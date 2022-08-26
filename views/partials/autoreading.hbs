@@ -1,0 +1,5 @@
+<form class="ui stacked segment form" action="/station/{{station.id}}/autoreport" method="POST">
+ <input type="hidden" id="lat" name="lat" value="{{station.latitude}}">
+<input type="hidden" id="lon" name="lon" value="{{station.longitude}}">
+  <button class="fluid ui teal submit button">Auto Generate Report</button>
+</form>

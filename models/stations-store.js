@@ -3,11 +3,11 @@
 const _ = require("lodash");
 const JsonStore = require("./json-store");
 const convert = require("../utils/conversions");
-const analytics = require("../utils/analytics")
+const analytics = require("../utils/analytics");
 
 const stationStore = {
   store: new JsonStore("./models/stations-store.json", {
-    stationCollection: []
+    stationCollection: [],
   }),
   collection: "stationCollection",
 
@@ -15,7 +15,7 @@ const stationStore = {
     return this.store.findAll(this.collection);
   },
 
-  getStation(id) { 
+  getStation(id) {
     return this.store.findOneBy(this.collection, { id: id });
   },
 
@@ -54,11 +54,11 @@ const stationStore = {
 
   getReading(id, readingId) {
     const station = this.store.findOneBy(this.collection, { id: id });
-    const readings = station.readings.filter(reading => reading.id == readingId);
+    const readings = station.readings.filter(
+      (reading) => reading.id == readingId
+    );
     return readings[0];
   },
- 
-
 };
 
 module.exports = stationStore;

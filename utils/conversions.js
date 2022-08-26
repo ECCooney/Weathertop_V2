@@ -151,6 +151,24 @@ const conversion = {
     return icon;
   },
   
+  apiCode(code) {
+    code = Number(code);
+    if ((code >= 200) && (code <= 232)) {
+      code = 800;
+    } else if ((code >= 300) && (code <= 321)) {
+      code = 400;
+    } else if ((code >= 500) && (code <= 531)) {
+      code = 600;
+    } else if ((code >= 600) && (code <= 622)) {
+      code = 700;
+    } else if (code === 800) {
+      code = 100;
+    } else if ((code >= 801) && (code <= 804)) {
+      code = 300;
+    }
+    return code;
+  },
+  
     
 };
 
