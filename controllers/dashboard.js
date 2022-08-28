@@ -17,8 +17,6 @@ const dashboard = {
       const latestWeather = analytics.latestWeather(station);
       station.latestWeather = latestWeather;
     }
-    
-    // let map = L.map('map').setView([51.505, -0.09], 13);
 
     const viewData = {
       title: "Weathertop Dashboard",
@@ -50,6 +48,7 @@ const dashboard = {
     stationStore.addStation(newStation);
     response.redirect("/dashboard");
   },
+  
 };
 
 module.exports = dashboard;

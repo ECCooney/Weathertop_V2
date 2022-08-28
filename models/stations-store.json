@@ -4,8 +4,8 @@
       "id": "dfdda350-208f-11ed-8658-8322dee3bfbf",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "Howth",
-      "latitude": "1.2323",
-      "longitude": "-10.111",
+      "latitude": "53.38689",
+      "longitude": "-6.0570",
       "newRead": {},
       "readings": [
         {
@@ -16,27 +16,49 @@
           "windSpeed": 4,
           "windDirection": 144,
           "pressure": 1013
+        },
+        {
+          "id": "13434e90-26ce-11ed-b503-e130b5bc74d2",
+          "date": "8/28/2022, 12:36:44 PM",
+          "code": 300,
+          "temperature": 17.8,
+          "windSpeed": 3.09,
+          "windDirection": 80,
+          "pressure": 1022,
+          "tempTrend": [],
+          "trendLabels": []
+        },
+        {
+          "id": "23743450-26ce-11ed-b503-e130b5bc74d2",
+          "date": "8/28/2022, 12:37:11 PM",
+          "code": 300,
+          "temperature": 17.8,
+          "windSpeed": 3.09,
+          "windDirection": 80,
+          "pressure": 1022,
+          "tempTrend": [],
+          "trendLabels": []
         }
       ],
       "latestWeather": {
         "code": 300,
-        "temperature": 24.15,
-        "pressure": 1013,
-        "tempF": "75.47",
+        "temperature": 17.8,
+        "pressure": 1022,
+        "tempF": "64.04",
         "beaufort": 1,
-        "windCompass": "South East",
-        "windChill": "25.89",
+        "windCompass": "East",
+        "windChill": "19.02",
         "conditions": "Cloudy",
-        "minWind": 4,
+        "minWind": 3.09,
         "maxWind": 4,
-        "minTemp": 24.15,
+        "minTemp": 17.8,
         "maxTemp": 24.15,
         "minPressure": 1013,
-        "maxPressure": 1013,
+        "maxPressure": 1022,
         "weatherIcon": "big cloud icon",
-        "tempTrend": null,
-        "windTrend": null,
-        "pressureTrend": null
+        "tempTrend": "big exchange icon",
+        "windTrend": "big exchange icon",
+        "pressureTrend": "big exchange icon"
       }
     },
     {
@@ -44,7 +66,7 @@
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "Rathmines",
       "latitude": "53.32",
-      "longitude": "6.25",
+      "longitude": "-6.25",
       "newRead": {},
       "readings": [
         {
@@ -106,17 +128,6 @@
           "trendLabels": []
         },
         {
-          "id": "8e496230-24c3-11ed-805b-73a6f1694410",
-          "date": "8/25/2022, 10:16:24 PM",
-          "code": 300,
-          "temperature": 21.39,
-          "windSpeed": 2.44,
-          "windDirection": 166,
-          "pressure": 1013,
-          "tempTrend": [],
-          "trendLabels": []
-        },
-        {
           "id": "625dee70-255e-11ed-bd18-9dc356b25c3f",
           "date": "8/26/2022, 4:44:42 PM",
           "code": 300,
@@ -126,28 +137,48 @@
           "pressure": 1016,
           "tempTrend": [],
           "trendLabels": []
+        },
+        {
+          "id": "d35318b0-26c3-11ed-a994-1b8b6fe739f1",
+          "date": "8/28/2022, 11:23:22 AM",
+          "code": 300,
+          "temperature": 19.76,
+          "windSpeed": 6.66,
+          "windDirection": 341,
+          "pressure": 1021,
+          "tempTrend": [],
+          "trendLabels": []
         }
       ],
       "latestWeather": {
         "code": 300,
-        "temperature": 21.39,
-        "pressure": 1013,
-        "tempF": "70.50",
-        "beaufort": 1,
-        "windCompass": "South South East",
-        "windChill": "23.08",
+        "temperature": 19.76,
+        "pressure": 1021,
+        "tempF": "67.57",
+        "beaufort": 2,
+        "windCompass": "North North West",
+        "windChill": "20.61",
         "conditions": "Cloudy",
         "minWind": 1.19,
-        "maxWind": 4.32,
-        "minTemp": 21.39,
+        "maxWind": 6.66,
+        "minTemp": 19.12,
         "maxTemp": 30.74,
         "minPressure": 1013,
-        "maxPressure": 1013,
+        "maxPressure": 1021,
         "weatherIcon": "big cloud icon",
         "tempTrend": "big exchange icon",
-        "windTrend": "big exchange icon",
-        "pressureTrend": "big exchange icon"
+        "windTrend": "big arrow up icon",
+        "pressureTrend": "big arrow up icon"
       }
+    },
+    {
+      "id": "34131e20-26ce-11ed-b503-e130b5bc74d2",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Mullingar",
+      "latitude": "53.5259",
+      "longitude": "-7.3381",
+      "newRead": {},
+      "readings": []
     }
   ]
 }
