@@ -17,7 +17,7 @@ router.get('/logout', accounts.logout);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 router.get('/account', accounts.accountDetails);
-router.post('/editMember', accounts.editMember);
+router.post('/accounts/editmember', accounts.editMember);
 
 //dashboards
 router.get("/dashboard", dashboard.index);

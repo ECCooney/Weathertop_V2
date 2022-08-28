@@ -3,7 +3,7 @@
     {
       "firstName": "Homer",
       "lastName": "Simpson",
-      "email": "homer@simpson.com",
+      "email": "homer@simpson.com",      
       "password": "secret",
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
     },
@@ -15,11 +15,11 @@
       "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
     },
     {
-      "firstName": "Ellen",
-      "lastName": "",
+      "firstname": "Ellen",
+      "lastname": "Cooney",
       "email": "ec@ec.com",
       "password": "1234",
-      "id": "caccaf00-1bd1-11ed-92ae-65a5bfde6c63"
+      "id": "f05de570-26cd-11ed-b503-e130b5bc74d2"
     }
   ]
 }
