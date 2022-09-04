@@ -45,7 +45,7 @@ const accounts = {
     user.id = uuid.v1();
     userstore.addUser(user);
     logger.info(`registering ${user.email}`);
-    response.redirect("/");
+    response.redirect("/login");
   },
 
   authenticate(request, response) {

@@ -178,6 +178,27 @@
       "latitude": "53.5259",
       "longitude": "-7.3381",
       "newRead": {},
+      "readings": [
+        {
+          "id": "a78427b0-26dc-11ed-8628-eb1fe445a806",
+          "date": "8/28/2022, 2:21:06 PM",
+          "code": 600,
+          "temperature": 19.31,
+          "windSpeed": 4.34,
+          "windDirection": 74,
+          "pressure": 1023,
+          "tempTrend": [],
+          "trendLabels": []
+        }
+      ]
+    },
+    {
+      "id": "59186550-2c45-11ed-904a-c14c2485d1f4",
+      "userid": "0d3053f0-2c45-11ed-904a-c14c2485d1f4",
+      "name": "Tramore",
+      "latitude": "53.32",
+      "longitude": "6.25",
+      "newRead": {},
       "readings": []
     }
   ]
