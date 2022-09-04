@@ -45,7 +45,7 @@ const accounts = {
     user.id = uuid.v1();
     userstore.addUser(user);
     logger.info(`registering ${user.email}`);
-    response.redirect("/");
+    response.redirect("/login");
   },
 
   authenticate(request, response) {
@@ -63,39 +63,22 @@ const accounts = {
     const userEmail = request.cookies.station;
     return userstore.getUserByEmail(userEmail);
   },
-  
- editMember(request, response) {
+
+  editMember(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
     const updatedUser = {
-      "firstName": request.body.firstname,
-      "lastName": request.body.lastname,
-      "email": request.body.email,
+      firstName: request.body.firstname,
+      lastName: request.body.lastname,
+      email: request.body.email,
     };
     userstore.updateUser(loggedInUser, updatedUser);
     const viewData = {
-      title: 'Account Details',
+      title: "Account Details",
       firstName: loggedInUser.firstName,
       lastName: loggedInUser.lastName,
     };
-    response.render('accountDetails', viewData);
+    response.render("accountDetails", viewData);
   },
-  
-  
-  
-  
-
-  // update(request, response) {
-  //   const userId = request.params.id;
-  //   const user = userstore.getUserById(userId);
-  //   const newUser = {
-  //     firstName: request.body.firstName,
-  //     email: request.body.email,
-  //     lastName: request.body.lastName,
-  //   };
-  //   logger.debug(`Updating User ${userId}`);
-  //   userstore.updateUser(user, newUser);
-  //   response.redirect("/account");
-  // },
 };
 
 module.exports = accounts;

@@ -105,7 +105,6 @@ const station = {
       console.error(error);
     }
   },
-  
 };
 
 module.exports = station;
