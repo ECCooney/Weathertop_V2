@@ -1,29 +1,29 @@
 body {
-    font-family: sans-serif;
-    background-color: #DADADA;
-    width: 100%;
+  font-family: sans-serif;
+  background-color: #dadada;
+  width: 100%;
 }
 
-.masthead{
-    height: 40em;
-    margin-top: 0px;
+.masthead {
+  height: 40em;
+  margin-top: 0px;
 }
 
-.masthead-background{
-    background-image: url(https://cdn.glitch.global/a5b20e7a-0b38-4215-95fe-1ece87de474e/clouds.png?v=1660997955971);
-    background-size: cover !important;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+.masthead-background {
+  background-image: url(https://cdn.glitch.global/a5b20e7a-0b38-4215-95fe-1ece87de474e/clouds.png?v=1660997955971);
+  background-size: cover !important;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
-.masthead h1.ui.header{
-    margin-top:1em;
-    margin-bottom: 0em;
-    font-size: 6em;
-    font-weight: bold;
+.masthead h1.ui.header {
+  margin-top: 1em;
+  margin-bottom: 0em;
+  font-size: 6em;
+  font-weight: bold;
 }
 
 .ui.vertical.segment:not(.masthead) {
-    padding-top: 6em;
-    padding-bottom: 6em;
+  padding-top: 6em;
+  padding-bottom: 6em;
 }

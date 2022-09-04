@@ -59,14 +59,13 @@ const stationStore = {
     );
     return readings[0];
   },
-  
+
   updateStation(station, updatedStation) {
     station.name = updatedStation.name;
     station.latitude = updatedStation.latitude;
     station.longitude = updatedStation.longitude;
     this.store.save();
-  }
-
+  },
 };
 
 module.exports = stationStore;

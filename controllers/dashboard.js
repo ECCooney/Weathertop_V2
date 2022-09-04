@@ -48,7 +48,6 @@ const dashboard = {
     stationStore.addStation(newStation);
     response.redirect("/dashboard");
   },
-  
 };
 
 module.exports = dashboard;

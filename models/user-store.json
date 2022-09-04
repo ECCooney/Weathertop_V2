@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "firstName": "Homer",
+      "firstName": "H",
       "lastName": "Simpson",
-      "email": "homer@simpson.com",
+      "email": "h@simpson.com",
       "password": "secret",
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
     },
@@ -34,6 +34,20 @@
       "email": "lisa@simpson.com",
       "password": "secrt",
       "id": "23e7a570-2c46-11ed-afbd-973fe178083c"
+    },
+    {
+      "firstName": "Maggie",
+      "lastName": "Simpson",
+      "email": "maggie@simpson.com",
+      "password": "secret",
+      "id": "6c413180-2c49-11ed-abd1-879d9025746f"
+    },
+    {
+      "firstName": "Maggie",
+      "lastName": "Simpson",
+      "email": "maggie@simpson.com",
+      "password": "secret",
+      "id": "c5873d10-2c4a-11ed-abd1-879d9025746f"
     }
   ]
 }
